@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="container mt-5 tabla">
+
+
+
+    @if (actua) {
+    <div class="conten-oscuro"></div>
+    <div class="content-form-actualizar">
+      <form action="">
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" class="form-control poadding" id="nombre" placeholder="Ingrese su nombre"
+            [(ngModel)]="actaulizarNombre" name="nombre" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control poadding" id="email" placeholder="Ingrese su email"
+            [(ngModel)]="actualizarEmail" name="email" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary poadding width" (click)="Actulizaarray()">Actualizar Usuario
+        </button>
+      </form>
+    </div>
+    }
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+     
+        @for(item2 of arrayusuarios; track $index ) {
+        <tr>
+          <td>{{ $index}}</td>
+          <td>{{item2.mostrarusuarios}}</td>
+          <td>{{item2.mostraremail}}</td>
+          <button class="btn btn-danger" (click)="EliminarAdvertencia($index)">Eliminar</button>
+          <button class="btn btn-primary" (click)="actualizardatos($index)">Actualizar</button>
+
+        </tr>
+        }
+
+
+      </tbody>
+    </table>
+  </div>
+  @if (mostrarAlert) {
+  <div class="conten-oscuro"></div>
+  <div class="content-form-actualizar">
+    <form class="form" action="">
+      <img src="../../assets/danger.jpg" alt="">
+
+      <div class="content-btn">
+        <button type="submit" class="btn btn-danger poadding width2" (click)="eliminar()">Aceptar</button>
+        <button type="submit" class="btn btn-primary poadding width2 " (click)="cancelar()">Cancelar </button>
+      </div>
+
+    </form>
+  </div>
+  }
+
+</body>
+
+</html>

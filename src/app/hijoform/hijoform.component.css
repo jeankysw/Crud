@@ -1,0 +1,79 @@
+.tabla {
+    margin: auto;
+    width: 60%;
+}
+
+body {
+    width: 100%;
+
+}
+
+form {
+    width: 400px;
+    border-radius: 5px;
+    box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+tr {
+    border: 1px solid black;
+
+}
+
+.content-form-actualizar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.conten-oscuro {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.poadding {
+    margin: 5px 0px 10px 0px;
+}
+
+.width {
+    width: 100%;
+
+}
+.width2 {
+    width: 200px;
+
+}
+
+img {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+}
+
+.form {
+    height: 300px;
+    width: 400px;
+}
+
+.content-btn {
+    width: 100%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
